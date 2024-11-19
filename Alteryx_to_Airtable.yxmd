@@ -1,0 +1,811 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="642" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="'&quot;fields&quot;: {&#xA;&quot;id&quot;:'+tostring([id]) +',&#xA;&quot;field1&quot;:&quot;' +[field1]+'&quot;,&#xA;&quot;field2&quot;: &quot;'+[field2]+'&quot;,&#xA;&quot;field3&quot;: &quot;'+[field3]+'&quot;'&#xA;&#xA;&#xA;" field="Payload" size="99999" type="V_WString" />
+            <FormulaField expression="'https://api.airtable.com/v0/app4voRmzU7KLUWrx/main'&#xA;&#xA;//'https://api.airtable.com/v0/app4voRmzU7KLUWrx/tblUsXFtSPG8QW0MT/'" field="url" size="255" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Payload = '"fields": {
+"id":'+tostring([id]) +',
+"field1":"' +[field1]+'",
+"fiel...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="834" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="&#xA;+'{&quot;records&quot;: [{'+[Payload]+' }}],&quot;typecast&quot;: true}'" field="Payload" size="99999" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Payload = 
++'{"records": [{'+[Payload]+' }}],"typecast": true}'
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings>
+        <Position x="738" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"event_id","genre","performer","venue","Event Date","Zone","Max. Resale Purchase Date","RUBS Held Tickets","Tickets Purchased From Secondary","Max Secondary Purchase Price","Avail Under Resale Purch Price","Tevo Min Price","Count of reps data","Count of Custom Query 1","purchased_tickets","sold_tickets","Tevo Total Available","quantity","RUBs/TEVO Price Diff","max_qty_to_purchase","Payload","url"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">False</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="930" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Payload" selected="True" />
+            <SelectField field="url" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="738" y="870" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="'&quot;fields&quot;: {&#xA;&quot;id&quot;:'+tostring([id]) +',&#xA;&quot;field1&quot;:&quot;' +[field1]+'&quot;,&#xA;&quot;field2&quot;: &quot;'+[field2]+'&quot;,&#xA;&quot;field3&quot;: &quot;'+[field3]+'&quot;'&#xA;" field="Payload" size="99999" type="V_WString" />
+            <FormulaField expression="'https://api.airtable.com/v0/app4voRmzU7KLUWrx/main/'+[id]&#xA;&#xA;//'https://api.airtable.com/v0/app4voRmzU7KLUWrx/tblUsXFtSPG8QW0MT/'" field="url" size="255" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Payload = '"fields": {
+"id":'+tostring([id]) +',
+"field1":"' +[field1]+'",
+"fiel...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="930" y="870" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="&#xA;'{'+[Payload]+' } ,&quot;typecast&quot;: true}'" field="Payload" size="99999" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Payload = 
+'{'+[Payload]+' } ,"typecast": true}'
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings>
+        <Position x="834" y="870" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"event_id","genre","performer","venue","Event Date","Zone","Max. Resale Purchase Date","RUBS Held Tickets","Tickets Purchased From Secondary","Max Secondary Purchase Price","Avail Under Resale Purch Price","Tevo Min Price","Count of reps data","Count of Custom Query 1","purchased_tickets","sold_tickets","Tevo Total Available","quantity","RUBs/TEVO Price Diff","max_qty_to_purchase","Payload","url"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">False</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1026" y="870" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Payload" selected="True" />
+            <SelectField field="url" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="642" y="870" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="id" selected="True" type="V_WString" size="255" />
+            <SelectField field="field1" selected="True" size="255" />
+            <SelectField field="field2" selected="True" size="255" />
+            <SelectField field="field3" selected="True" size="255" />
+            <SelectField field="genre" selected="True" size="255" />
+            <SelectField field="performer" selected="True" size="255" />
+            <SelectField field="venue" selected="True" size="255" />
+            <SelectField field="zone" selected="True" size="255" />
+            <SelectField field="trigger_price_threshold" selected="True" size="255" />
+            <SelectField field="trigger_max_qty_to_purchase" selected="True" size="255" />
+            <SelectField field="Right_manager" selected="False" size="255" />
+            <SelectField field="Right_analyst" selected="False" size="255" />
+            <SelectField field="Right_analyst_email" selected="True" size="255" />
+            <SelectField field="Right_manager_email" selected="True" size="255" />
+            <SelectField field="createdTime" selected="True" size="255" />
+            <SelectField field="event_date" selected="True" size="255" />
+            <SelectField field="max_resale_purchase_date" selected="True" size="255" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="954" y="606" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Payload]" field="Payload" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Payload = [Payload]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="858" y="606" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="url" action="GroupBy" rename="url" />
+            <SummarizeField field="Payload" action="Concat" rename="Payload">
+              <Concat_Start />
+              <Separator>,</Separator>
+              <Concat_End><![CDATA[ ]]></Concat_End>
+            </SummarizeField>
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="654" y="606" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="&quot;'&quot;+'records[]='+[id]+&quot;'&quot;&#xA;&#xA;//'{&quot;id&quot;:&quot;'+[id] +'&quot;,&quot;deleted&quot;: true'&#xA;&#xA;" field="Payload" size="99999" type="V_WString" />
+            <FormulaField expression="'https://api.airtable.com/v0/app4voRmzU7KLUWrx/main/'+[id]&#xA;&#xA;//'https://api.airtable.com/v0/app4voRmzU7KLUWrx/tblUsXFtSPG8QW0MT/'" field="url" size="255" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Payload = "'"+'records[]='+[id]+"'"
+
+//'{"id":"'+[id] +'","deleted": true'
+
+
+url...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings>
+        <Position x="774" y="606" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">""</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">False</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="48">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="306" y="606" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="3" />
+          <Fields>
+            <Field name="id" />
+            <Field name="field1" />
+            <Field name="field2" />
+            <Field name="field3" />
+          </Fields>
+          <Data>
+            <r>
+              <c>1</c>
+              <c>a</c>
+              <c>b</c>
+              <c>c</c>
+            </r>
+            <r>
+              <c>2</c>
+              <c>d</c>
+              <c>e</c>
+              <c>f</c>
+            </r>
+            <r>
+              <c>3</c>
+              <c>g</c>
+              <c>h</c>
+              <c>i</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="49">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="582" y="606" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="id" selected="True" type="V_WString" size="255" />
+            <SelectField field="field1" selected="True" size="255" />
+            <SelectField field="field2" selected="True" size="255" />
+            <SelectField field="field3" selected="True" size="255" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="47">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1144" y="388" width="274" height="531" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>API Output</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>API Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="38">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="1169" y="437" width="205" height="133" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>POST REQUEST</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>POST REQUEST</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="36">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+                <Position x="1290" y="486" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <TempFile>
+                  </TempFile>
+                  <TempFileDataProfiling />
+                  <Layout>
+                    <ViewMode>Single</ViewMode>
+                    <ViewSize value="100" />
+                    <View1>
+                      <DefaultTab>Profile</DefaultTab>
+                      <Hints>
+                        <Table />
+                      </Hints>
+                    </View1>
+                    <View2 />
+                  </Layout>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+            </Node>
+            <Node ToolID="37">
+              <GuiSettings Plugin="AlteryxConnectorGui.Download.Download">
+                <Position x="1194" y="486" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <URLField>url</URLField>
+                  <OutputMode>String</OutputMode>
+                  <CodePage>65001</CodePage>
+                  <EncodeURLs value="True" />
+                  <Headers>
+                    <NameValues>
+                      <Item name="Authorization" value="Bearer YOUR-TOKEN-HERE" />
+                      <Item name="Content-Type" value="application/json" />
+                    </NameValues>
+                    <Fields orderChanged="False">
+                      <Field name="Payload" selected="False" />
+                      <Field name="url" selected="False" />
+                      <Field name="*Unknown" selected="False" />
+                    </Fields>
+                  </Headers>
+                  <Payload>
+                    <HTTPAction>POST</HTTPAction>
+                    <QueryStringBodyMode>Field</QueryStringBodyMode>
+                    <Field>Payload</Field>
+                  </Payload>
+                  <numConnections>2</numConnections>
+                  <Timeout>600</Timeout>
+                  <EnableRPM value="False" />
+                  <DcmAdvancedAuth value="False" />
+                  <Password />
+                  <UserName />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxConnectorEngine.dll" EngineDllEntryPoint="AlteryxDownload" />
+            </Node>
+          </ChildNodes>
+        </Node>
+        <Node ToolID="43">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="1169" y="593" width="205" height="133" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>DELETE REQUEST</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>DELETE REQUEST</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="41">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+                <Position x="1290" y="642" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <TempFile>
+                  </TempFile>
+                  <TempFileDataProfiling />
+                  <Layout>
+                    <ViewMode>Single</ViewMode>
+                    <ViewSize value="100" />
+                    <View1>
+                      <DefaultTab>Profile</DefaultTab>
+                      <Hints>
+                        <Table />
+                      </Hints>
+                    </View1>
+                    <View2 />
+                  </Layout>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+            </Node>
+            <Node ToolID="42">
+              <GuiSettings Plugin="AlteryxConnectorGui.Download.Download">
+                <Position x="1194" y="642" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <URLField>url</URLField>
+                  <OutputMode>String</OutputMode>
+                  <CodePage>65001</CodePage>
+                  <EncodeURLs value="True" />
+                  <Headers>
+                    <NameValues>
+                      <Item name="Authorization" value="Bearer YOUR-TOKEN-HERE" />
+                      <Item name="Content-Type" value="application/json" />
+                    </NameValues>
+                    <Fields orderChanged="False">
+                      <Field name="url" selected="False" />
+                      <Field name="*Unknown" selected="False" />
+                    </Fields>
+                  </Headers>
+                  <Payload>
+                    <HTTPAction>DELETE</HTTPAction>
+                    <QueryStringBodyMode>Text</QueryStringBodyMode>
+                    <Text />
+                  </Payload>
+                  <numConnections>2</numConnections>
+                  <Timeout>600</Timeout>
+                  <EnableRPM value="False" />
+                  <DcmAdvancedAuth value="False" />
+                  <Password />
+                  <UserName />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxConnectorEngine.dll" EngineDllEntryPoint="AlteryxDownload" />
+            </Node>
+          </ChildNodes>
+        </Node>
+        <Node ToolID="46">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="1169" y="761" width="224" height="133" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>UPDATE/PATCH REQUEST</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>UPDATE/PATCH REQUEST</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="44">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+                <Position x="1290" y="810" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <TempFile>
+                  </TempFile>
+                  <TempFileDataProfiling />
+                  <Layout>
+                    <ViewMode>Single</ViewMode>
+                    <ViewSize value="100" />
+                    <View1>
+                      <DefaultTab>Profile</DefaultTab>
+                      <Hints>
+                        <Table />
+                      </Hints>
+                    </View1>
+                    <View2 />
+                  </Layout>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+            </Node>
+            <Node ToolID="45">
+              <GuiSettings Plugin="AlteryxConnectorGui.Download.Download">
+                <Position x="1194" y="810" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <URLField>url</URLField>
+                  <OutputMode>String</OutputMode>
+                  <CodePage>65001</CodePage>
+                  <EncodeURLs value="True" />
+                  <Headers>
+                    <NameValues>
+                      <Item name="Authorization" value="Bearer YOUR-TOKEN-HERE" />
+                      <Item name="Content-Type" value="application/json" />
+                    </NameValues>
+                    <Fields orderChanged="False">
+                      <Field name="url" selected="False" />
+                      <Field name="Payload" selected="False" />
+                      <Field name="*Unknown" selected="False" />
+                    </Fields>
+                  </Headers>
+                  <Payload>
+                    <HTTPAction>Custom</HTTPAction>
+                    <CustomHTTPAction>PATCH</CustomHTTPAction>
+                    <QueryStringBodyMode>Field</QueryStringBodyMode>
+                    <Field>Payload</Field>
+                  </Payload>
+                  <numConnections>2</numConnections>
+                  <Timeout>600</Timeout>
+                  <EnableRPM value="False" />
+                  <DcmAdvancedAuth value="False" />
+                  <Password />
+                  <UserName />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxConnectorEngine.dll" EngineDllEntryPoint="AlteryxDownload" />
+            </Node>
+          </ChildNodes>
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output26" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="10" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output26" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="45" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="42" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="18" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output26" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="1" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="49" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="49" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="Output" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="Output" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Alteryx_to_Airtable</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="2b1ffecc-c587-4a39-9aaa-2153d0e3b097" />
+      <Telemetry>
+        <PreviousWorkflowId value="e56de622-54de-4de3-a078-0dcef282b2ab" />
+        <OriginWorkflowId value="e56de622-54de-4de3-a078-0dcef282b2ab" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
